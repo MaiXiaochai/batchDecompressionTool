@@ -14,6 +14,7 @@ class Passwords(BaseTable):
 
     id = Column(Integer, autoincrement=True)
     password = Column(String(128))
+    tag = Column(String())
 
     __table_args__ = (
         UniqueConstraint('password', name='uic_password'),
